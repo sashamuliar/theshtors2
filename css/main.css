@@ -1,0 +1,147 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body, p, ul, li, a, header, footer {
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	font-family: sans-serif;
+	height: 100%;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.page_wrapper{
+	width: 100%;
+	min-height: 100vh;
+	background:url('../images/room2.jpg')no-repeat;
+	background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/*------header-----*/
+.header-wrapper{
+	position: absolute;
+	width: 100%;
+}
+
+header{
+	padding: 22px 0px;
+}
+.logo{
+	margin-right: 35px;
+}
+.logo a{
+	color: #ec7a5c;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-size: 1.35em;
+	display: block;
+}
+.tools {
+	padding:10px 15px;
+	font-size: 1em;
+}
+.tools ul li{
+	float: left;
+	margin-right: 13px;
+}
+.tools ul li a{
+	color: #fff;
+}
+.tools_num{
+	margin-left: 3px;
+	font-size: 14px;
+}
+.wish{
+
+}
+.search{
+	margin-right: 7px;
+}
+.menu{
+	float: left;
+}
+.menu ul li{
+	float: left;
+	margin-right: 10px;
+}
+.menu ul li a{
+	display: block;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	padding: 12px 15px;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+
+/*-------header-end------*/
+
+
+/*-------contennt--------*/
+.main-title-wrap{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}
+.wrap-buffer{
+	
+}
+.main-title-wrap p{
+	max-width: 800px;
+	margin: auto;
+	color: #fff;
+	text-align: center;
+	font-size: 4.5em;
+	letter-spacing: -2px;
+}
+/*--------content-end------*/
+footer{
+	background: #eee;
+}
+
+.m-right{
+	margin-right: 15px;
+}
+.m-left{
+	margin-left: 15px;
+}
+.p-right{
+	padding-right: 15px;
+}
+.p-left{
+	padding-left: 15px;
+}
+.f-left{
+	float:left;
+}
+.f-right{
+	float: right;
+}
+
+.clear{clear:both;}
+.row{padding:0 50px;}
+.row .col-1 	{ width: 8.333333333%; }
+.row .col-2 	{ width: 16.666666666%; }
+.row .col-3 	{ width: 25%; }
+.row .col-4   { width: 33.333333333%; }
+.row .col-5 	{ width: 41.666666667%; }
+.row .col-6 	{ width: 50%; }
+.row .col-7 	{ width: 58.333333333%; }
+.row .col-8 	{ width: 66.666666667%; }
+.row .col-9 	{ width: 75%; }
+.row .col-10  { width: 83.333333333%; }
+.row .col-11  { width: 91.666666667%;}
+.row .col-12  { width: 100%; }

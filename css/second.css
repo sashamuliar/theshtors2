@@ -1,0 +1,243 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+}
+body, p, ul, li, a, header, footer {
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	font-family: sans-serif;
+	height: 100%;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.page_wrapper{
+	width: 100%;
+	min-height: 100vh;
+}
+/*------header-----*/
+
+
+header{
+	padding: 22px 0px;
+}
+.logo{
+	margin-right: 35px;
+}
+.logo a{
+	color: #ec7a5c;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-size: 1.35em;
+	display: block;
+}
+.tools {
+	padding:10px 15px;
+	font-size: 1em;
+}
+.tools ul li{
+	float: left;
+	margin-right: 13px;
+}
+.tools ul li a{
+	color: #444;
+}
+.tools_num{
+	margin-left: 3px;
+	font-size: 14px;
+}
+.wish{
+
+}
+
+
+.search{
+	margin-right: 7px;
+}
+.menu{
+	float: left;
+}
+.menu ul li{
+	float: left;
+	margin-right: 10px;
+}
+.menu ul li a{
+	display: block;
+	color: #555;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	padding: 12px 15px;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+
+/*-------header-end------*/
+
+
+/*-------contennt--------*/
+.main-title-wrap{
+	display: flex;
+	align-items: ;
+	flex-direction: column;
+}
+.page-title{
+	max-width: 800px;
+	margin: auto;
+	color: #555;
+	text-align: center;
+	font-size: 3.5em;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.product{
+	width: 300px;
+	float: left;
+}
+.product-category img{
+	display: none;
+}
+/*--------content-end------*/
+
+/*----cart----*/
+
+.woocommerce .woocommerce-message{
+	border: none;
+}
+.woocommerce form{
+	float: left;
+	width: 65%;
+	padding-right: 40px;
+}
+.main-title-wrap .woocommerce .cart-collaterals{
+	float: right;
+	width: 35%;
+}
+.main-title-wrap .woocommerce .cart-collaterals .cart_totals{
+	float: none;
+	width: 100%;
+}
+.main-title-wrap .woocommerce .shop_table{
+	border: 0;
+}
+.woocommerce .product-remove a.remove {
+    color: #545454 !important;
+    transition: 0.3s;
+}
+.woocommerce .product-remove a.remove:hover{
+	color: #aaa !important;
+	background: none;
+	transition: 0.3s;
+}
+.wc-proceed-to-checkout{
+	text-align: center;
+}
+.woocommerce a.button.alt.wc-forward{
+	background-color: #ec7a5c;
+}
+.woocommerce a.button.alt.wc-forward:hover{
+	background-color: rgba(236,122,92,0.5);
+}
+.product-thumbnail img{
+	width: 100px;
+}
+.product-name a{
+	color: #555;
+}
+.woocommerce .product-quantity .quantity input{
+	height: 50px;
+	width:55px;
+	font-size: 1.3em;
+	border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:solid 1px rgba(0,0,0,0.15);
+	padding-left: 13px;
+}
+.main-title-wrap .woocommerce table.cart td.actions .input-text{
+	width: 100px;
+	height: 35px;
+	font-size: 0.9em;
+}
+.cart-empty{
+	background: url('../icons/empty_cart.png') no-repeat;
+	text-align: center;
+	background-position: center;
+	padding-top: 230px;
+	font-size: 3em;
+	font-weight: 600;
+	letter-spacing: 3px;
+	color: #555;
+}
+.return-to-shop{
+	margin:50px auto;
+	text-align: center;
+}
+.woocommerce .return-to-shop a.button{
+	color: #ec7a5c;
+}
+/*----cart-end---*/
+
+footer{
+	background: #eee;
+	padding: 60px 0 50px;
+	text-align: center;
+}
+footer a{
+	color: #555;
+	font-size: 1.6em;
+	padding: 5px 5px;
+    margin: 0 8px;
+    transition:0.3s;
+}
+footer a:hover{
+	color: #ec7a5c;
+	transition:0.3s;
+}
+.copy{
+	font-size:9px;
+	color: #a0a0a0;
+	margin-top: 15px;
+}
+.m-right{
+	margin-right: 15px;
+}
+.m-left{
+	margin-left: 15px;
+}
+.p-right{
+	padding-right: 15px;
+}
+.p-left{
+	padding-left: 15px;
+}
+.f-left{
+	float:left;
+}
+.f-right{
+	float: right;
+}
+
+.clear{clear:both;}
+.row{padding:0 50px;}
+.row .col-1 	{ width: 8.333333333%; }
+.row .col-2 	{ width: 16.666666666%; }
+.row .col-3 	{ width: 25%; }
+.row .col-4   { width: 33.333333333%; }
+.row .col-5 	{ width: 41.666666667%; }
+.row .col-6 	{ width: 50%; }
+.row .col-7 	{ width: 58.333333333%; }
+.row .col-8 	{ width: 66.666666667%; }
+.row .col-9 	{ width: 75%; }
+.row .col-10  { width: 83.333333333%; }
+.row .col-11  { width: 91.666666667%;}
+.row .col-12  { width: 100%; }
