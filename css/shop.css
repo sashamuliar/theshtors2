@@ -218,7 +218,7 @@ h3{
 	font-size: 16px;
 	color:rgba(84,84,84,0.55);
 	position: absolute;
-	bottom: 0;
+	bottom: 3px;
 	left: 10px;
 	transition: 0.25s;
 }
@@ -229,16 +229,47 @@ h3{
 	transition: 0.25s;
 	color: #ec7a5c;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 13px;
 }
-.product:hover .add_to_cart_button{
-	bottom: 0;
-	transition: 0.25s;
-}
-.product:hover .price{
+.add_to_cart_button.go_cart{
+	bottom: 18px;
 	opacity: 0;
 	transition: 0.25s;
 }
+.price.hide_price{
+	bottom: 18px;
+	opacity: 0;
+	transition: 0.25s;
+}
+.product:hover .add_to_cart_button{
+	bottom: 3px;
+	transition: 0.25s;
+}
+.product:hover .add_to_cart_button.go_cart{
+	bottom: 18px;
+}
+.product:hover .price{
+	bottom: 18px;
+	opacity: 0;
+	transition: 0.25s;
+}
+.added_to_cart{
+	font-size: 13px;
+	color: #ec7a5c;
+	position: absolute;
+	animation: cart_anim 0.15s ease-out;
+	text-transform: uppercase;
+}
+@keyframes cart_anim{
+	from {
+		bottom:-18px;
+	}
+	to{
+		bottom: 3px;
+	}
+
+}
+
 /*--------content-end------*/
 /*---------item--------*/
 .product{
