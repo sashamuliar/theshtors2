@@ -19,3 +19,38 @@ for (var a = 0; a < cart.length; a++){
 	};
 };
 console.log(cart);
+var hamb = document.getElementById("hamb");
+var page = document.getElementById("page");
+var dark = document.getElementById('darkness');
+var humbIcon = document.getElementById("hamburger-icon");
+humbIcon.addEventListener("click", activate);
+function activate(){
+	humbIcon.className += " active";
+
+}
+hamb.addEventListener("click", openMenu);
+function openMenu(){
+	page.className += " openned_right";
+	event.stopPropagation();
+	console.log(dark);
+	darkness.className += " show";
+};
+page.addEventListener("click", closeMenu);
+		function closeMenu(){
+			page.className = "page_wrapper";
+			darkness.className = "darkness";
+			humbIcon.className = "hamburger-icon";
+			test.className = "test_wrapper";
+			arrow.className = "arrow-icon";		
+};
+var arrow = document.getElementById("arrow-icon");
+var test = document.getElementById("test_wrapper");
+arrow.addEventListener("click", activateSidebar);
+function activateSidebar(){
+	arrow.className += " active";
+	/*page.className += " left";*/
+	test.className += " openned_left";
+	event.stopPropagation();
+	console.log(page.className);
+	darkness.className += " show";
+} ;
