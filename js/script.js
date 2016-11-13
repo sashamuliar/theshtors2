@@ -21,36 +21,33 @@ for (var a = 0; a < cart.length; a++){
 console.log(cart);
 var hamb = document.getElementById("hamb");
 var page = document.getElementById("page");
-var dark = document.getElementById('darkness');
-var humbIcon = document.getElementById("hamburger-icon");
-humbIcon.addEventListener("click", activate);
-function activate(){
-	humbIcon.className += " active";
+var arrow = document.getElementById("arrow-icon");
+var sec = document.getElementById("sec_wrapper");
+var menuM = document.getElementById("menu-m");
+var sideM = document.getElementById("side-m");
 
-}
+
 hamb.addEventListener("click", openMenu);
 function openMenu(){
 	page.className += " openned_right";
 	event.stopPropagation();
-	console.log(dark);
-	darkness.className += " show";
+	menuM.style.zIndex = 5;
 };
 page.addEventListener("click", closeMenu);
 		function closeMenu(){
 			page.className = "page_wrapper";
-			darkness.className = "darkness";
-			humbIcon.className = "hamburger-icon";
-			test.className = "test_wrapper";
-			arrow.className = "arrow-icon";		
+			menuM.style.zIndex = 3;
+			setTimeout(function(){
+				sideM.style.zIndex = 3;	
+			},400);
+				
 };
-var arrow = document.getElementById("arrow-icon");
-var test = document.getElementById("test_wrapper");
+
 arrow.addEventListener("click", activateSidebar);
 function activateSidebar(){
-	arrow.className += " active";
-	/*page.className += " left";*/
-	test.className += " openned_left";
-	event.stopPropagation();
-	console.log(page.className);
-	darkness.className += " show";
+	
+	page.className += " openned_left";
+		event.stopPropagation();
+	sideM.style.zIndex = 5;
+
 } ;

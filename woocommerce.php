@@ -10,8 +10,7 @@
 <?php wp_head(); ?>	
 </head>
 <body>
-	<div class="test_wrapper" id="test_wrapper">
-		<div class="page_wrapper" id="page">
+	<div class="page_wrapper" id="page">
 			<div class="container_box">
 				<div class="header-wrapper">
 					<header>
@@ -21,7 +20,7 @@
 									<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ?></a>
 								</div>
 								<div class="hamb f-right" id="hamb">
-									<a id="hamburger-icon" class="hamburger-icon" href="#" title="Menu">
+									<a class="hamburger-icon" href="#" title="Menu">
 									  <span class="line line-1"></span>
 									  <span class="line line-2"></span>
 									  <span class="line line-3"></span>
@@ -80,31 +79,31 @@
 						<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
 						<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 						<p class="copy">Theshtors Limited Corporation™® All rights reserved. Copyright 2016.</p>
-						<?php wp_footer(); ?>
+						
 					</div>
 				</footer>
 			</div>
 			<div class="darkness" id="darkness"></div>
 			<div class="side_btn">
-				<div class="little">
-					<a id="arrow-icon" class="arrow-icon" href="#" title="Menu">
+				<div class="little" id="arrow-icon">
+					<a  class="arrow-icon" title="Menu">
 						<span class="arrow-line line-1"></span>
 						<span class="arrow-line line-2"></span>
 					</a>
 				</div>
 			</div>
-		</div>
 	</div>
-	<div class="side-mobile">
+	<div class="side-mobile" id="side-m">
 		<aside>
 			<ul>
 		  		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>
 		  	</ul>
 		</aside>
 	</div>
-	<div class="menu-mobile">
+	<div class="menu-mobile" id="menu-m">
 		<?php wp_nav_menu(array('theme_location' => 'nav_menu')) ?>
 	</div>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
+	<?php wp_footer(); ?>
 </body>
 </html>		
