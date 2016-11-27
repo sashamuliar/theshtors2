@@ -1,6 +1,6 @@
-var title = document.querySelector(".page-title");
+/*ar title = document.querySelector(".page-title");
 var mainTitle = document.getElementById("mainTitle");
-mainTitle.appendChild(title);
+mainTitle.appendChild(title);*/
 var categories = document.getElementById('categories-list');
 var selectCaegories = document.querySelectorAll('.product-category');
 for (var i = 0; i < selectCaegories.length; i++){
@@ -20,7 +20,7 @@ for (var a = 0; a < cart.length; a++){
 };
 console.log(cart);
 var hamb = document.getElementById("hamb");
-var page = document.getElementById("page");
+var container = document.getElementById("container");
 var arrow = document.getElementById("arrow-icon");
 var sec = document.getElementById("sec_wrapper");
 var menuM = document.getElementById("menu-m");
@@ -29,25 +29,29 @@ var sideM = document.getElementById("side-m");
 
 hamb.addEventListener("click", openMenu);
 function openMenu(){
-	page.className += " openned_right";
+	container.className += " openned_right";
 	event.stopPropagation();
 	menuM.style.zIndex = 5;
 };
-page.addEventListener("click", closeMenu);
+container.addEventListener("click", closeMenu);
 		function closeMenu(){
-			page.className = "page_wrapper";
+			container.className = "container_box";
 			menuM.style.zIndex = 3;
 			setTimeout(function(){
 				sideM.style.zIndex = 3;	
 			},400);
 				
 };
+side = document.querySelector('#side')
 
 arrow.addEventListener("click", activateSidebar);
 function activateSidebar(){
 	
-	page.className += " openned_left";
+	container.className += " openned_left";
 		event.stopPropagation();
 	sideM.style.zIndex = 5;
 
 } ;
+//if (document.querySelector('#item-signer')){
+//		side.style.display = 'none';
+//}
