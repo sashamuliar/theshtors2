@@ -14,6 +14,7 @@ html{
 body{
 	font-family: sans-serif;
 	height: 100%;
+	overflow-x: hidden;
 }
 li{
 	list-style: none;
@@ -50,10 +51,10 @@ ins{
 
 @media only screen and (max-width: 980px){
 .sec_wrap{
-	overflow:hidden;
+
 }
 .third_wrap{
-	height: 100%;
+	
 }
 .container_box{
 	position: relative;
@@ -212,7 +213,7 @@ header .menu{
 .hamburger-icon .line.line-3 {
   top: 100%;
 }
-/*
+
 .container_box.openned_right .hamburger-icon .line-1 {
   transform: translateY(13px) translateX(0) rotate(45deg);
   -webkit-transform: translateY(13px) translateX(0) rotate(45deg);
@@ -226,7 +227,7 @@ header .menu{
   -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg);
   -moz-transform: translateY(-12px) translateX(0) rotate(-45deg);
 }
-*/
+
 
 .arrow-icon {
   width: 30px;
@@ -263,7 +264,7 @@ header .menu{
   -webkit-transform: translateY(0px) translateX(0) rotate(-55deg);
   -moz-transform: translateY(0px) translateX(0) rotate(-55deg);
 }
-/*.container_box.openned_left .arrow-icon .line-1 {
+.container_box.openned_left .arrow-icon .line-1 {
   transform: translateY(0px) translateX(0) rotate(125deg);
   -webkit-transform: translateY(0) translateX(0) rotate(125deg);
   -moz-transform: translateY(0px) translateX(0) rotate(125deg);
@@ -272,7 +273,7 @@ header .menu{
   transform: translateY(-0) translateX(0) rotate(-125deg);
   -webkit-transform: translateY(0) translateX(0) rotate(-125deg);
   -moz-transform: translateY(0) translateX(0) rotate(-125deg);
-}*/
+}
 
 /*hamb-animation-end*/
 /*-------header-end------*/
@@ -298,6 +299,9 @@ header .menu{
 
 .woocommerce-result-count{
 	display: none;
+}
+.woocommerce-ordering{
+	padding-right: 10px;
 }
 .orderby{
 	float: right;
@@ -528,7 +532,7 @@ form .price_slider_wrapper .price_slider_amount button{
 	color: #9c1818;
 }
 .woocommerce-pagination{   
-	margin: 20px 0px 67px;
+	margin: 20px 0px 50px 10px;
 }
 footer{
 	background: #eee;
@@ -599,8 +603,6 @@ footer a:hover{
 	margin-bottom: 15px;
 	font-size: 2em;
 	color: #ec7a5c;
-}
-.price{
 	text-align: center;
 }
 .summary .price del{
@@ -715,6 +717,12 @@ input[name="quantity"]{
 .left{
 	left: 0;
 }
+.p-right{
+	padding-right: 10px;
+}
+.p-left{
+	padding-left: 10px;
+}
 .row .col-sm-1 	{ width: 8.333333333%; }
 .row .col-sm-2 	{ width: 16.666666666%; }
 .row .col-sm-3 	{ width: 25%; }
@@ -731,9 +739,27 @@ input[name="quantity"]{
 @media only screen and (min-width: 980px){
 
 /*------header-----*/
-
+.header-wrapper{
+	background: #fff;
+	width: 100%;
+	transition: 0.4s;
+	position: absolute;
+	top: 0;
+}
+.header-wrapper.fixed{
+	position: fixed;
+	background: #555;
+	top: 0;
+	z-index: 12;
+	transition: 0.4s;
+}
+.header-wrapper.fixed header{
+	padding: 12px 0px;
+	transition: 0.4s;
+}
 header{
 	padding: 22px 0px;
+	transition: 0.4s;
 }
 .logo{
 	margin-right: 35px;
@@ -742,19 +768,29 @@ header{
 	color: #ec7a5c;
 	padding: 10px 0;
 	text-transform: uppercase;
-	font-size: 1.35em;
+	font-size: 1.5em;
 	display: block;
+	transition: 0.4s;
+}
+.header-wrapper.fixed .logo a {
+	font-size: 1.1em;
+	transition: 0.4s;
 }
 .tools {
-	padding:10px 15px;
+	padding:10px 0;
 	font-size: 1em;
 }
 .tools ul li{
 	float: left;
-	margin-right: 13px;
+	margin-left: 13px;
 }
 .tools ul li a{
 	color: #444;
+	transition: 0.4s;
+}
+.header-wrapper.fixed .tools ul li a{
+	color: #fff;
+	transition: 0.4s;
 }
 .tools_num{
 	margin-left: 3px;
@@ -783,6 +819,9 @@ header{
 	padding: 12px 15px;
 	font-size: 0.9em;
 	font-weight: 600;
+}
+.header-wrapper.fixed .menu ul li a{
+	color: #fff;
 }
 .hamb{
 	display: none;
@@ -876,8 +915,11 @@ form .price_slider_wrapper .price_slider_amount button{
 }
 /*aside-end*/
 /*-------contennt--------*/
+.content{
+	margin-top: 120px;
+}
 .title-box{
-	margin:50px auto 20px;	
+	margin:auto 20px;	
 }
 .products >li:nth-of-type(4n+1){
 	clear: both;
@@ -902,9 +944,12 @@ form .price_slider_wrapper .price_slider_amount button{
 	margin-bottom: 10px;
 	position: relative;
     top: 32px;
-    right: 240px;
+    right: 255px;
     font-size: 13px;
     color: #9a9a9a;
+}
+.woocommerce-ordering{
+	padding-right: 10px;
 }
 .orderby{
 	float: right;
@@ -1046,7 +1091,7 @@ h3{
 	color: #9c1818;
 }
 .woocommerce-pagination{   
-	margin: 20px 0px 67px;
+	margin: 20px 0px 50px 10px;
 }
 
 
@@ -1077,16 +1122,16 @@ footer a:hover{
 }
 
 .m-right{
-	margin-right: 15px;
+	margin-right: 10px;
 }
 .m-left{
-	margin-left: 15px;
+	margin-left: 10px;
 }
 .p-right{
-	padding-right: 15px;
+	padding-right: 10px;
 }
 .p-left{
-	padding-left: 15px;
+	padding-left: 10px;
 }
 .f-left{
 	float:left;
@@ -1126,10 +1171,24 @@ footer a:hover{
 	padding-left: 30px;
 	position: relative;
 }
+.woocommerce-main-image{
+	float: left;
+    display: block;
+    width: 83.333%;
+}
 .woocommerce-main-image img{
 	width: 100%;
 	height: 100%;
 	max-width: 510px;
+}
+.thumbnails{
+	width: 16.666%;
+	float: left;
+}
+.thumbnails a{
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
 }
 .woocommerce-tabs{
 	clear: both;
@@ -1254,7 +1313,7 @@ input[name="quantity"]{
 }
 
 .products li{
-	width: 16.6%;
+	width: 16.666%;
 }
 .single-wrap{
 	width: 85%;

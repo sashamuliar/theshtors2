@@ -14,10 +14,10 @@
 		<div class="sec_wrap">
 			<div class="page_wrapper" id="page">	
 				<div class="container_box" id="container">
-					<div class="header-wrapper">
+					<div class="header-wrapper" id="hWrapper">
 						<header>
 							<div class="row">
-								<div class="col-12 col-sm-12">
+								<div class="col-12 col-sm-12 p-left p-right">
 									<div class="logo f-left">
 										<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ?></a>
 									</div>
@@ -56,7 +56,7 @@
 									</ul>
 								</div>
 							</div>
-							<div id="side" class="sidebar-part col-2 col-mid-3 f-left">
+							<div id="side" class="sidebar-part col-2 p-left col-mid-3 f-left">
 								<aside>
 									<ul>
 						  				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>
