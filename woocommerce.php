@@ -7,7 +7,7 @@
 	<title><?php bloginfo('name'); ?></title> 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/shop.css"/>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/font-awesome/css/font-awesome.min.css">
-<?php wp_head(); ?>	
+<?php wp_head(); ?>
 </head>
 <body>
 	<div class="third_wrap">
@@ -30,7 +30,8 @@
 									</div>
 									<div class="tools f-right">
 										<ul>
-											<li><a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+											<?php dynamic_sidebar('top'); ?>
+											<li><a href="#" class="search" id="search_btn"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 											<li><a href="#" class="wish"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="tools_num">0</span></a></li>
 											<li><a href="<?php bloginfo('url'); ?>/shop/cart" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="tools_num"><?php echo WC()->cart->get_cart_contents_count(); ?></span></a></li>
 										</ul>
@@ -59,7 +60,8 @@
 							<div id="side" class="sidebar-part col-2 p-left col-mid-3 f-left">
 								<aside>
 									<ul>
-						  				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>
+						  				<!--<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>-->
+						  				<?php dynamic_sidebar( 'left_side' ); ?>
 									</ul>
 								</aside>
 							</div>	

@@ -1,3 +1,4 @@
+<div class="checkout_wrapper">
 <?php
 /**
  * Checkout Form
@@ -19,6 +20,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 
 wc_print_notices();
 
@@ -62,9 +64,11 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 		</div>
 	</div>
+	<div class="clear"></div>
 
 	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
 </form>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+</div>

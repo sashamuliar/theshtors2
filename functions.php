@@ -18,7 +18,17 @@ widgets
 */
 if ( function_exists('register_sidebar') ) {
   register_sidebar(array(
+  	'name' => 'Left side',
+  	'id'=> 'left_side',
     'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget' => '</li>',
+    'before_title' => '<span class="widgettitle">',
+    'after_title' => '</span>',
+  ));
+  register_sidebar(array(
+  	'name' => 'Top search',
+  	'id'=> 'top',
+    'before_widget' => '<li id="%1$s" class="search_line %2$s">',
     'after_widget' => '</li>',
     'before_title' => '<span class="widgettitle">',
     'after_title' => '</span>',

@@ -382,7 +382,7 @@ h3{
 	left: 10px;
 	transition: 0.25s;
 }
-.add_to_cart_button{
+.add_to_cart_button, .product_type_simple{
 	display: block;
 	margin-top: 3px;
 	left: 10px;
@@ -524,6 +524,7 @@ form .price_slider_wrapper .price_slider_amount button{
 	color: #ec7a5c;
 	padding: 15px 16px;
 	font-weight: 600;
+	display: block;
 }
 .page-numbers li:first-child a, .page-numbers li:first-child span{
 	padding-left: 0;
@@ -532,7 +533,7 @@ form .price_slider_wrapper .price_slider_amount button{
 	color: #9c1818;
 }
 .woocommerce-pagination{   
-	margin: 20px 0px 50px 10px;
+	margin: 20px 0px 20px 10px;
 }
 footer{
 	background: #eee;
@@ -559,6 +560,50 @@ footer a:hover{
 
 /*-----side-part-end-----*/
 /*------single-product----*/
+.star-rating{
+	font-size: 14px;
+    margin: 0 0 8px;
+    top: 2px;
+    display: block;
+    float: none;
+    width: 66px;
+    font-family: star;
+   	overflow: hidden;
+    position: relative;
+    height: 1em;
+    line-height: 1;
+    color: #545454;
+}
+.star-rating::before, .woocommerce-page .star-rating::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: "\f005\f005\f005\f005\f005";
+    color: #a1a1a1;
+}
+.star-rating span {
+    overflow: hidden;
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-top: 1.5em;
+    color: #545454;
+}
+.star-rating span::before, .woocommerce-page .star-rating span::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: "\f005\f005\f005\f005\f005";
+    color: #EC7A5C;
+}
+.star-rating span:before {
+	top: 0;
+    position: absolute;
+    left: 0;
+}
 /*------single-product-end---*/
 /*single page*/
 .single-wrap{
@@ -693,6 +738,43 @@ input[name="quantity"]{
 	color: #555;
 }
 .wc-tab h2{}
+/*---review----*/
+p.stars a {
+    position: relative;
+    height: 1em;
+    width: 1em;
+    text-indent: -999em;
+    display: inline-block;
+    text-decoration: none;
+    color: #EC7A5C;
+}
+p.stars a::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    font-family: WooCommerce;
+    text-indent: 0;
+}
+p.stars.selected a:not(.active):before {
+    content: "\e020";
+}
+p.stars.selected a.active:before, p.stars:hover a:before {
+    content: "\e020";
+}
+p.stars.selected a.active~a:before {
+    content: "\e021";
+}
+p.stars a:before,p.stars a:hover~a:before {
+    content: "\e021";
+}
+.comment-reply-title{
+	font-weight: 600;
+	font-size: 24px;
+}
 /*single page - end*/
 .content aside{
 	display: none;
@@ -801,8 +883,26 @@ header{
 }
 
 
+.search_line input[type=submit], .search_line label{
+	display: none;
+}
 .search{
 	margin-right: 7px;
+}
+.search-field{
+	width: 0;
+	border: none;
+	transition: 0.4s;
+	opacity: 0;
+}
+.search-field.show{
+	border: 1px solid #999;
+	width: 200px;
+	transition: all 0.4s;
+	border-radius: 3px;
+	height: 1.9em;
+	opacity: 1;
+	transition-timing-function: cubic-bezier(0,0.5,0.5,1);
 }
 .menu{
 	float: left;
@@ -917,6 +1017,7 @@ form .price_slider_wrapper .price_slider_amount button{
 /*-------contennt--------*/
 .content{
 	margin-top: 120px;
+	margin-bottom: 30px;
 }
 .title-box{
 	margin:auto 20px;	
@@ -1017,7 +1118,6 @@ h3{
 	text-transform: capitalize;
 }
 .products h3{
-	font-size: 13px;
 }
 
 .products .price{
@@ -1028,7 +1128,7 @@ h3{
 	left: 10px;
 	transition: 0.25s;
 }
-.add_to_cart_button{
+.add_to_cart_button, .product_type_simple{
 	position: absolute;
 	bottom: -18px;
 	left: 10px;
@@ -1047,11 +1147,11 @@ h3{
 	opacity: 0;
 	transition: 0.25s;
 }
-.products .product:hover .add_to_cart_button{
+.products .product:hover .product_type_simple{
 	bottom: 5px;
 	transition: 0.25s;
 }
-.products .product:hover .add_to_cart_button.go_cart{
+.products .product:hover .product_type_simple.go_cart{
 	bottom: 18px;
 }
 .products .product:hover .price{
@@ -1073,7 +1173,54 @@ h3{
 .product{
 	position: relative;
 }
-
+.products .product h3{
+	font-size: 14px;
+	margin:10px 0 3px;
+}
+.star-rating{
+	font-size: 14px;
+    margin: 0 0 8px;
+    top: 2px;
+    display: block;
+    float: none;
+    width: 66px;
+    font-family: star;
+   	overflow: hidden;
+    position: relative;
+    height: 1em;
+    line-height: 1;
+    color: #545454;
+}
+.star-rating::before, .woocommerce-page .star-rating::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: "\f005\f005\f005\f005\f005";
+    color: #a1a1a1;
+}
+.star-rating span {
+    overflow: hidden;
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-top: 1.5em;
+    color: #545454;
+}
+.star-rating span::before, .woocommerce-page .star-rating span::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: "\f005\f005\f005\f005\f005";
+    color: #EC7A5C;
+}
+.star-rating span:before {
+	top: 0;
+    position: absolute;
+    left: 0;
+}
 /*---------item-end-------*/
 .page-numbers li{
 	float: left;
@@ -1091,7 +1238,7 @@ h3{
 	color: #9c1818;
 }
 .woocommerce-pagination{   
-	margin: 20px 0px 50px 10px;
+	margin: 20px 0px 20px 10px;
 }
 
 
@@ -1300,6 +1447,45 @@ input[name="quantity"]{
 	color: #555;
 }
 .wc-tab h2{}
+
+
+/*---review----*/
+p.stars a {
+    position: relative;
+    height: 1em;
+    width: 1em;
+    text-indent: -999em;
+    display: inline-block;
+    text-decoration: none;
+    color: #EC7A5C;
+}
+p.stars a::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    font-family: WooCommerce;
+    text-indent: 0;
+}
+p.stars.selected a:not(.active):before {
+    content: "\e020";
+}
+p.stars.selected a.active:before, p.stars:hover a:before {
+    content: "\e020";
+}
+p.stars.selected a.active~a:before {
+    content: "\e021";
+}
+p.stars a:before,p.stars a:hover~a:before {
+    content: "\e021";
+}
+.comment-reply-title{
+	font-weight: 600;
+	font-size: 24px;
+}
 /*single page - end*/
 
 }

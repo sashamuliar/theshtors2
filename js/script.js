@@ -26,6 +26,12 @@ var sec = document.getElementById("sec_wrapper");
 var menuM = document.getElementById("menu-m");
 var sideM = document.getElementById("side-m");
 var hWrapper = document.getElementById("hWrapper");
+var search = document.getElementById("search_btn");
+var searchField = document.getElementById("woocommerce-product-search-field");
+search.addEventListener("click", searchActive);
+function searchActive() {
+	searchField.className += " show";
+};
 
 hamb.addEventListener("click", openMenu);
 function openMenu(){

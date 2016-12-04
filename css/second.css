@@ -87,6 +87,9 @@ header{
 
 
 /*-------contennt--------*/
+.content{
+	margin-bottom: 30px;
+}
 .main-title-wrap{
 	display: flex;
 	align-items: ;
@@ -118,7 +121,7 @@ header{
 .woocommerce-message a{
 	color: #ec7a5c;
 }
-.woocommerce form{
+.woocommerce .cart-form{
 	float: left;
 	width: 65%;
 	padding-right: 40px;
@@ -192,10 +195,15 @@ header{
 }
 /*----cart-end---*/
 /*----check-out---*/
-
-.content .woocommerce form{
-	width: 100%;
-	padding: 0;
+.review_wrapper h3{
+	padding-left: 12px;
+}
+.checkout_wrapper h3{
+	font-size: 23px;
+	text-transform: uppercase;
+}
+.checkout_wrapper label{
+	font-size: 13px;
 }
 .content .customer-info input{
 	height: 34px;
@@ -203,6 +211,18 @@ header{
 }
 .review_wrapper{
 	margin-left: 30px;
+}
+.review_wrapper .shop_table .product-name{
+	padding: 20px 0px 19px 12px;
+}
+.woocommerce table.shop_table tfoot .order-total td,.woocommerce table.shop_table tfoot .order-total th{
+	border-top: none;
+}
+.woocommerce-info{
+	text-align: center;
+}
+.checkout_wrapper .woocommerce-info::before{
+	display: none;
 }
 /*----check-out-end--*/
 footer{
@@ -259,3 +279,15 @@ footer a:hover{
 .row .col-10  { width: 83.333333333%; }
 .row .col-11  { width: 91.666666667%;}
 .row .col-12  { width: 100%; }
+
+@media only screen and (min-width: 1280px){
+.checkout_wrapper{
+	width: 85%;
+	margin: 0 auto;
+}
+@media only screen and (min-width: 1600px){
+.checkout_wrapper{
+	width: 75%;
+	margin: 0 auto;
+}
+}
